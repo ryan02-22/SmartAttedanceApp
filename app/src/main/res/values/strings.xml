@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Absensi-Mahasiswa</string>
+
+    <!-- General UI -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_LogOut">Logout</string>
+
+    <!-- Login Page -->
+    <string name="txt_upb">UPB Attendance</string>
+    <string name="txt_universitas">Universitas Pelita Bangsa</string>
+
+    <!-- Dashboard Page -->
+    <string name="txt_selamatdatang">Selamat Datang</string>
+    <string name="txt_Ryan">Adha Adnan Febryan</string>
+    <string name="txt_input_masuk">Absen Masuk</string>
+    <string name="txt_input_keluar">Absen Keluar</string>
+    <string name="txt_riwayatabsensi">Riwayat Absensi</string>
+    <string name="txt_Tanggal">Tanggal</string>
+    <string name="txt_Absen_masuk">Absen Masuk</string>
+    <string name="txt_Absen_keluar">Absen Keluar</string>
+
+    <!-- Logout Dialog -->
+    <string name="dialog_logout_title">Logout</string>
+    <string name="dialog_logout_message">Apakah Anda yakin akan keluar dari aplikasi ini?</string>
+    <string name="dialog_logout_yes">Ya</string>
+    <string name="dialog_logout_no">Tidak</string>
+
+    <!-- Strings for default fragments (restored to fix build error) -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus dui nec risus. Maecenas non sodales nisi, vel dictum dolor. </string>
+
+</resources>
