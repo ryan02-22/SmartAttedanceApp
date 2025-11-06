@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -38,7 +39,6 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_screen);
 
-        // Initialize Database and DAO
         AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
         absenDao = db.absenDao();
 
@@ -69,7 +69,7 @@ public class DashboardActivity extends AppCompatActivity {
             newAbsen.jamMasuk = currentTime;
             absenDao.insert(newAbsen);
 
-            loadAttendanceHistory(); // Refresh the table
+            loadAttendanceHistory();
             Toast.makeText(this, "Absen masuk berhasil direkam.", Toast.LENGTH_SHORT).show();
         }
     }
@@ -87,25 +87,31 @@ public class DashboardActivity extends AppCompatActivity {
             todayAbsen.jamKeluar = currentTime;
             absenDao.update(todayAbsen);
 
-            loadAttendanceHistory(); // Refresh the table
+            loadAttendanceHistory();
             Toast.makeText(this, "Absen keluar berhasil direkam.", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void loadAttendanceHistory() {
-        // Clear previous data rows (keep the header)
         while (tableLayout.getChildCount() > 1) {
             tableLayout.removeViewAt(1);
         }
 
         List<Absen> history = absenDao.getAll();
-        for (Absen absen : history) {
-            addTableRow(absen);
+        for (int i = 0; i < history.size(); i++) {
+            Absen absen = history.get(i);
+            addTableRow(absen, i);
         }
     }
 
-    private void addTableRow(Absen absen) {
+    private void addTableRow(Absen absen, int index) {
         TableRow newRow = new TableRow(this);
+        // Apply zebra stripe
+        if (index % 2 == 0) {
+            newRow.setBackgroundColor(ContextCompat.getColor(this, R.color.light_gray));
+        } else {
+            newRow.setBackgroundColor(Color.WHITE);
+        }
 
         TextView dateCell = createTableCell(absen.tanggal);
         TextView absenMasukCell = createTableCell(absen.jamMasuk);
@@ -127,7 +133,6 @@ public class DashboardActivity extends AppCompatActivity {
         return textView;
     }
 
-    // --- Logout Dialog Logic (remains the same) ---
     private void showLogoutDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();

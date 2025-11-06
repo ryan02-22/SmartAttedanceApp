@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Background for pill-shaped TextViews -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/bluecyan" />
+    <!-- High radius to make it pill-shaped -->
+    <corners android:radius="100dp" />
+</shape>

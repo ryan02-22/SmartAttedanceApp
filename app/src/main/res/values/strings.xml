@@ -2,12 +2,11 @@
     <string name="app_name">Absensi-Mahasiswa</string>
 
     <!-- General UI -->
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
     <string name="txt_login">Login</string>
     <string name="txt_email">Username</string>
     <string name="txt_password">Password</string>
-    <string name="txt_LogOut">Logout</string>
+    <string name="txt_logout">Logout</string>
+    <string name="login_failed_prompt">Tidak dapat login?</string>
 
     <!-- Login Page -->
     <string name="txt_upb">UPB Attendance</string>
@@ -15,13 +14,11 @@
 
     <!-- Dashboard Page -->
     <string name="txt_selamatdatang">Selamat Datang</string>
-    <string name="txt_Ryan">Adha Adnan Febryan</string>
-    <string name="txt_input_masuk">Absen Masuk</string>
-    <string name="txt_input_keluar">Absen Keluar</string>
+    <string name="txt_ryan">Adha Adnan Febryan</string>
+    <string name="txt_absen_masuk">Absen Masuk</string>
+    <string name="txt_absen_keluar">Absen Keluar</string>
     <string name="txt_riwayatabsensi">Riwayat Absensi</string>
-    <string name="txt_Tanggal">Tanggal</string>
-    <string name="txt_Absen_masuk">Absen Masuk</string>
-    <string name="txt_Absen_keluar">Absen Keluar</string>
+    <string name="txt_tanggal">Tanggal</string>
 
     <!-- Logout Dialog -->
     <string name="dialog_logout_title">Logout</string>
@@ -29,7 +26,9 @@
     <string name="dialog_logout_yes">Ya</string>
     <string name="dialog_logout_no">Tidak</string>
 
-    <!-- Strings for default fragments (restored to fix build error) -->
+    <!-- Unused Strings - Kept to prevent build errors -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus dui nec risus. Maecenas non sodales nisi, vel dictum dolor. </string>

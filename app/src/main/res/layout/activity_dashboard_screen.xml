@@ -20,7 +20,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bluecyan"
+            android:background="@color/blue"
             android:padding="16dp">
 
             <TextView
@@ -30,6 +30,7 @@
                 android:text="@string/txt_selamatdatang"
                 android:textColor="@color/white"
                 android:textSize="16sp"
+                android:fontFamily="sans-serif-black" 
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true" />
 
@@ -37,15 +38,15 @@
                 android:id="@+id/btn_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="4dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:background="@android:color/transparent"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:padding="4dp"
-                android:text="@string/txt_LogOut"
+                android:text="@string/txt_logout"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
             <ImageView
                 android:id="@+id/imageView"
@@ -64,7 +65,7 @@
                 android:layout_below="@id/imageView"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
-                android:text="@string/txt_Ryan"
+                android:text="@string/txt_ryan"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -88,9 +89,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
-            android:text="Absen Masuk"
+            android:text="@string/txt_absen_masuk"
+            android:elevation="4dp" 
             app:backgroundTint="@color/gren_muda"
-            app:cornerRadius="20dp" />
+            app:cornerRadius="8dp"/>
 
         <Button
             android:id="@+id/btn_absen_keluar"
@@ -98,9 +100,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="8dp"
-            android:text="Absen Keluar"
-            app:backgroundTint="@color/red2"
-            app:cornerRadius="20dp" />
+            android:text="@string/txt_absen_keluar"
+            android:elevation="4dp" 
+            app:backgroundTint="@color/red"
+            app:cornerRadius="8dp"/>
 
     </LinearLayout>
 
@@ -121,7 +124,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Riwayat Absensi"
+                android:text="@string/txt_riwayatabsensi"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -143,21 +146,21 @@
                         android:background="@color/bluecyan">
 
                         <TextView
-                            android:text="@string/txt_Tanggal"
+                            android:text="@string/txt_tanggal"
                             android:textColor="@color/white"
                             android:padding="8dp"
                             android:gravity="center"
                             android:textStyle="bold"/>
 
                         <TextView
-                            android:text="Absen Masuk"
+                            android:text="@string/txt_absen_masuk"
                             android:textColor="@color/white"
                             android:padding="8dp"
                             android:gravity="center"
                             android:textStyle="bold"/>
 
                         <TextView
-                            android:text="Absen Keluar"
+                            android:text="@string/txt_absen_keluar"
                             android:textColor="@color/white"
                             android:padding="8dp"
                             android:gravity="center"

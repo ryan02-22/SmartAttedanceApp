@@ -1,15 +1,13 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true">
-        <shape android:shape="rectangle">
-            <solid android:color="@color/bluecyan" />
-            <corners android:radius="50dp" />
-        </shape>
-    </item>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ripple effect for click animation -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white"> <!-- Ripple color -->
+
+    <!-- Background shape - OVAL for circle -->
     <item>
-        <shape android:shape="rectangle">
+        <shape android:shape="oval">
             <solid android:color="@color/bluecyan" />
-            <corners android:radius="50dp"
-                />
         </shape>
     </item>
-</selector>
+
+</ripple>
